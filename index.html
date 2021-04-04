@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArtKart</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link class="titleicon" rel = "icon" href =  
+"https://resi.ze-robot.com/dl/ul/ultraviolet-4k-wallpaper-2560%C3%971600.jpg" 
+        type = "image/x-icon"> 
+</head>
+<body bgcolor="white">
+	
+<div class="heading">
+	<link rel="stylesheet" rel = "icon" href =  
+"https://resi.ze-robot.com/dl/ul/ultraviolet-4k-wallpaper-2560%C3%971600.jpg" 
+        type = "image/x-icon">
+<header><h1 >ArtKart</h1>
+<p class="para">Decorate your life</p>
+</div>
+Username: <input src type="image" name="uname"> 
+</header>
+<br>
+<div style="float: left;"></div>
+	<p><a href="http://www.google.com"> S1 </a></p>
+	<p><a href="www.yahoo.com"> S2 </a></p>
+	<p><a href="www.bing.com"> S3 </a></p>
+
+<button onclick="hideshowfunc()">Show</button>
+<div id="myDIV" style=" float:left;">
+	
+	<p><a href="http://www.google.com"> GOOGLE </a></p>
+	<p><a href="www.yahoo.com"> YAHOO </a></p>
+	<p><a href="www.bing.com"> BING </a></p>
+</div>
+</div>	
+<div class="row" style=" float:right;">
+
+	<div class="w3-content w3-display-container">
+		
+			<img class="mySlides" src="images/bg1.jpg" style="width:980px; height:500px; float=right;">
+			<img class="mySlides" src="images/bg2.jpg" style="width:980px; height:500px; float=right;">
+			<img class="mySlides" src="images/bg3.jpg" style="width:980px; height:500px; float=right;">
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+ 			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		
+  
+</div>
+</div>
+
+<iframe height="1399" width="1300" frameborder="0" src="tst.html"></iframe>
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+function hideshowfunc() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<style type="text/css">
+	.body{box-sizing: 100px 100px}
+	.para{color:white;}
+	.heading{
+		color:rgb(300,50,34);
+		background-color: #222222;
+		background-position: center;
+		box-shadow:0 0 25px rgba(0, 0, 0, 1);
+		text-shadow:0 0 10px rgba(0, 0, 0, 1);
+		text-align: left;
+		border-width: none;
+		margin: -10px 5px 10px 5px;
+		padding: 20px 10px;
+		font-family: "Lato" ;
+		border-radius: 0px 0px 30px 30px;
+		text-decoration-color: white;
+
+	}
+	.mySlides {display:none;}
+	.titleicon{
+		border-radius: 3000px
+	}
+</style>
+<footer><hr><center>&copy copyright 2020 <span style="color: red">ArtKart</span>.com</center></footer>
+</body>
+</html>
