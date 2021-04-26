@@ -2,55 +2,100 @@
 <html>
 <head>
 	<title>ArtKart</title>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link class="titleicon" rel = "icon" href =  
 "https://resi.ze-robot.com/dl/ul/ultraviolet-4k-wallpaper-2560%C3%971600.jpg" 
         type = "image/x-icon"> 
 </head>
-<body bgcolor="white">
-	
-<div class="heading">
-	<link rel="stylesheet" rel = "icon" href =  
-"https://resi.ze-robot.com/dl/ul/ultraviolet-4k-wallpaper-2560%C3%971600.jpg" 
-        type = "image/x-icon">
-<header><h1 >ArtKart</h1>
+<body id="bodyy">
+<div class="heading" >
+	<link rel="stylesheet" rel = "icon" href ="https://resi.ze-robot.com/dl/ul/ultraviolet-4k-wallpaper-2560%C3%971600.jpg" type = "image/x-icon">
+<header><h1>ArtKart</h1>
 <p class="para">Decorate your life</p>
 </div>
-Username: <input src type="image" name="uname"> 
+<hr>
 </header>
 <br>
-<div style="float: left;"></div>
-	<p><a href="http://www.google.com"> S1 </a></p>
-	<p><a href="www.yahoo.com"> S2 </a></p>
-	<p><a href="www.bing.com"> S3 </a></p>
+<form>
+Username: <input src type="name" name="uname"> 
+</form>
+<div  >
+	<a href="http://www.google.com" class="linkbuttons"> S1 </a>
+	<a href="www.yahoo.com" class="linkbuttons"> S2 </a>
+	<a href="www.bing.com" class="linkbuttons"> S3 </a>
 
 <button onclick="hideshowfunc()">Show</button>
-<div id="myDIV" style=" float:left;">
+<div id="myDIV">
 	
-	<p><a href="http://www.google.com"> GOOGLE </a></p>
-	<p><a href="www.yahoo.com"> YAHOO </a></p>
-	<p><a href="www.bing.com"> BING </a></p>
+	<a href="http://www.google.com" class="linkbuttons"> GOOGLE </a>
+	<a href="www.yahoo.com" class="linkbuttons"> YAHOO </a>
+	<a href="www.bing.com" class="linkbuttons"> BING </a>
 </div>
 </div>	
 <div class="row" style=" float:right;">
 
 	<div class="w3-content w3-display-container">
 		
-			<img class="mySlides" src="images/bg1.jpg" style="width:980px; height:500px; float=right;">
-			<img class="mySlides" src="images/bg2.jpg" style="width:980px; height:500px; float=right;">
-			<img class="mySlides" src="images/bg3.jpg" style="width:980px; height:500px; float=right;">
+			<img class="mySlides" src="images/bg1.jpg" style="width:100%; height:100%; float=right;">
+			<img class="mySlides" src="images/bg2.jpg" style="width:100%; height:100%; float=right;">
+			<img class="mySlides" src="images/bg3.jpg" style="width:100%; height:100%; float=right;">
 			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
  			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 		
   
 </div>
 </div>
+<button onclick="cfunc()">Change Background</button>
 
-<iframe height="1399" width="1300" frameborder="0" src="tst.html"></iframe>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		background-image: url('images/bg1.jpg');
+		background-size: cover;
+	}
+	.para{color:white;}
+	.linkbuttons{
+		background-color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		color:rgb(300,50,34);
+		margin: 40px;
+		border-width: 2px;
+	}
+	.heading{
+		color:rgb(300,50,34);
+		background-color: #222222;
+		box-shadow:10px 10px 25px rgba(0, 0, 0, 1);
+		text-shadow:0 0 10px rgba(0, 0, 0, 1);
+		text-align: center;
+		margin: -100px 5px 5px -5px;
+		padding: 80px 10px 30px 20px;
+		font-family: "Lato" ;
+		border-radius:30px 30px;
+		width: 100%;
+		text-decoration-color: white;
 
-
-
+	}
+	.mySlides {display:none;}
+	footer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		font-family: "Lato" ;
+		border-radius: 30px 30px 30px 30px;
+		margin:5px 5px;
+		text-decoration-color: white;
+		text-decoration-style: white;
+	}
+	.titleicon{
+		border-radius: 3000px
+	}
+</style>
+<footer><hr><center>&copy copyright 2020 <span style="color: red">ArtKart</span>.com</center></footer>
 <script>
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -68,6 +113,27 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+var b;
+b=1;
+function cfunc() {
+  
+  console.log("heyy");
+  if (b==1){
+  	document.body.style.backgroundImage = 'url("images/bg1.jpg")';
+  	alert(document.body.style.backgroundImage);
+  	b++;
+  }
+  else if (b==2){
+  	document.body.style.backgroundImage = 'url("images/bg2.jpg")';
+  	alert(document.body.style.backgroundImage);
+  	b++;
+  } 
+  else if (b==3){
+  	document.body.style.backgroundImage = 'url("images/bg3.jpg")';
+  	alert(document.body.style.backgroundImage);
+  	b=1;
+  } else { alert("No Background");}
+}
 
 function hideshowfunc() {
   var x = document.getElementById("myDIV");
@@ -79,29 +145,6 @@ function hideshowfunc() {
 }
 </script>
 
-<style type="text/css">
-	.body{box-sizing: 100px 100px}
-	.para{color:white;}
-	.heading{
-		color:rgb(300,50,34);
-		background-color: #222222;
-		background-position: center;
-		box-shadow:0 0 25px rgba(0, 0, 0, 1);
-		text-shadow:0 0 10px rgba(0, 0, 0, 1);
-		text-align: left;
-		border-width: none;
-		margin: -10px 5px 10px 5px;
-		padding: 20px 10px;
-		font-family: "Lato" ;
-		border-radius: 0px 0px 30px 30px;
-		text-decoration-color: white;
-
-	}
-	.mySlides {display:none;}
-	.titleicon{
-		border-radius: 3000px
-	}
-</style>
-<footer><hr><center>&copy copyright 2020 <span style="color: red">ArtKart</span>.com</center></footer>
+</div>
 </body>
 </html>
